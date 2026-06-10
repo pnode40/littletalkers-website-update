@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Talkers Early Intervention Services | Chicagoland Pediatric Therapy</title>
+  <meta name="description" content="Little Talkers provides Illinois Early Intervention services for children ages 0–3 across Chicagoland, plus speech therapy for ages 3–5. Warm, play-based, in-home care." />
+
+  <!-- Tailwind CSS (CDN for a self-contained file; compile for production if desired) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            /* Sampled directly from the Little Talkers logo */
+            coral: {
+              DEFAULT: '#F2544E', /* "Little Talkers" wordmark red/coral */
+              dark:   '#D93F39',
+              soft:   '#FDEAE8',
+            },
+            brand: {
+              blue:      '#1A5DC8', /* "Early Intervention Services" blue */
+              bluedark:  '#15479A',
+              bluesoft:  '#E8F0FC',
+            },
+            cream:  '#FBF7F2', /* warm off-white background */
+            sand:   '#F4ECE2', /* warm neutral section background */
+            ink:    '#3A3532', /* warm near-black for text */
+            inksoft:'#6B625C',
+          },
+          fontFamily: {
+            display: ['"Nunito"', 'ui-rounded', 'system-ui', 'sans-serif'],
+            body: ['"Nunito Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Friendly, highly readable type pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    html { -webkit-font-smoothing: antialiased; }
+    /* Gentle lift for cards — subtle, not distracting */
+    .lift { transition: transform .25s ease, box-shadow .25s ease; }
+    .lift:hover, .lift:focus-within { transform: translateY(-3px); box-shadow: 0 12px 28px -12px rgba(58,53,50,.18); }
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      .lift, .lift:hover { transition: none; transform: none; }
+      html { scroll-behavior: auto; }
+    }
+    /* Visible keyboard focus everywhere */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid #1A5DC8; outline-offset: 2px; border-radius: .5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-cream font-body text-ink">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] bg-brand-blue text-white px-4 py-2 rounded-lg">Skip to main content</a>
+
+  <!-- ============================================================
+       1. STICKY HEADER
+  ============================================================ -->
+  <header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-sand">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between gap-4 py-3">
+      <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Little Talkers Early Intervention Services — home">
+        <!-- LOGO PLACEHOLDER: drop the provided square logo file at assets/little-talkers-logo.png (use as-is, do not recolor) -->
+        <img src="assets/little-talkers-logo.png" alt="Little Talkers Early Intervention Services logo — five smiling illustrated baby faces" class="h-12 w-auto sm:h-14" width="120" height="120" />
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="hidden md:flex items-center gap-6 text-[15px] font-semibold text-inksoft">
+          <li><a href="#early-intervention" class="hover:text-coral">Early Intervention</a></li>
+          <li><a href="#services" class="hover:text-coral">How We Help</a></li>
+          <li><a href="#get-started" class="hover:text-coral">Getting Started</a></li>
+          <li><a href="#speech-3-5" class="hover:text-coral">Ages 3–5</a></li>
+          <li><a href="#careers" class="hover:text-coral">Careers</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="inline-flex items-center rounded-full bg-coral px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-coral-dark transition-colors">
+        Contact Us
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ============================================================
+       2. HERO
+  ============================================================ -->
+  <section id="top" class="relative overflow-hidden">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20 grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="inline-block rounded-full bg-brand-bluesoft text-brand-bluedark text-sm font-bold px-4 py-1.5 mb-5">For families with children ages 0–3</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-extrabold leading-tight text-ink">
+          Wondering about your child's development? <span class="text-coral">You're not alone</span> — and help is here.
+        </h1>
+        <p class="mt-5 text-lg text-inksoft leading-relaxed max-w-xl">
+          Little Talkers brings warm, play-based therapy right into your home through the Illinois Early Intervention program. Small steps, big milestones — together.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
+          <a href="#get-started" class="inline-flex justify-center items-center rounded-full bg-coral px-7 py-3.5 text-base font-bold text-white shadow-md hover:bg-coral-dark transition-colors">
+            How to Get Started
+          </a>
+          <a href="#early-intervention" class="inline-flex justify-center items-center rounded-full border-2 border-brand-blue px-7 py-3 text-base font-bold text-brand-blue hover:bg-brand-bluesoft transition-colors">
+            What is Early Intervention?
+          </a>
+        </div>
+        <p class="mt-6 text-sm font-semibold text-inksoft">
+          State-funded Early Intervention&nbsp;&bull;&nbsp;Serving Chicagoland families
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- HERO PHOTO PLACEHOLDER (1000×750, 4:3): warm candid photo of a therapist or parent playing on the floor with a toddler, soft natural light -->
+        <img src="https://placehold.co/1000x750/F4ECE2/6B625C?text=Hero+photo%3A+therapist+%26+toddler+playing+(1000%C3%97750)"
+             alt="A therapist sitting on a living-room floor, smiling and playing with a toddler stacking blocks"
+             class="w-full rounded-3xl shadow-lg object-cover aspect-[4/3]" width="1000" height="750" loading="eager" />
+        <div class="absolute -bottom-4 -left-4 hidden sm:block h-24 w-24 rounded-full bg-coral-soft" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. WHAT IS EARLY INTERVENTION
+  ============================================================ -->
+  <section id="early-intervention" class="bg-sand">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20 grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div class="order-2 lg:order-1">
+        <!-- PHOTO PLACEHOLDER (800×600): parent holding young child, reassuring everyday moment at home -->
+        <img src="https://placehold.co/800x600/FBF7F2/6B625C?text=Photo%3A+parent+%26+child+at+home+(800%C3%97600)"
+             alt="A parent holding their young child close in a sunlit kitchen, both smiling"
+             class="w-full rounded-3xl shadow-md object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+      </div>
+      <div class="order-1 lg:order-2">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink">What is Early Intervention?</h2>
+        <p class="mt-4 text-lg text-inksoft leading-relaxed">
+          Early Intervention (EI) is Illinois' statewide program that supports children from birth to age 3 who have delays in their development — or who may be at risk for them. It's funded by the state, and every Illinois family has the right to a free evaluation.
+        </p>
+        <ul class="mt-6 space-y-4">
+          <li class="flex gap-3">
+            <span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-coral-soft text-coral-dark grid place-items-center font-bold" aria-hidden="true">✓</span>
+            <p class="text-inksoft"><strong class="text-ink">It's normal to have questions.</strong> Many parents notice something — fewer words, later steps — and simply want to understand. Asking is a sign of a caring parent, not a problem.</p>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-coral-soft text-coral-dark grid place-items-center font-bold" aria-hidden="true">✓</span>
+            <p class="text-inksoft"><strong class="text-ink">Services happen where life happens.</strong> Therapy takes place in your home or daycare, woven into play and daily routines your child already loves.</p>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-coral-soft text-coral-dark grid place-items-center font-bold" aria-hidden="true">✓</span>
+            <p class="text-inksoft"><strong class="text-ink">The earlier, the better.</strong> A young child's brain grows fastest before age 3 — gentle support now can make a lifelong difference.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. SERVICES / HOW WE SUPPORT YOUR CHILD
+  ============================================================ -->
+  <section id="services">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink">How We Support Your Child</h2>
+        <p class="mt-4 text-lg text-inksoft leading-relaxed">
+          Every child grows in their own way. Through play — the way little ones learn best — our therapists support the whole child, alongside you.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card -->
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-coral-soft grid place-items-center text-2xl" aria-hidden="true">💬</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Communication</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">First words, gestures, and back-and-forth play — helping your child express their needs and connect with you.</p>
+        </article>
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-brand-bluesoft grid place-items-center text-2xl" aria-hidden="true">🤸</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Movement &amp; Motor Skills</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">Rolling, crawling, walking, and little hands learning to grasp, stack, and explore.</p>
+        </article>
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-coral-soft grid place-items-center text-2xl" aria-hidden="true">🧩</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Learning &amp; Problem Solving</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">Curiosity in action — figuring out how toys work, finding hidden things, and trying new ideas.</p>
+        </article>
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-brand-bluesoft grid place-items-center text-2xl" aria-hidden="true">🫶</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Social &amp; Emotional Growth</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">Smiles, hugs, taking turns, and building the warm bonds that help children feel safe and loved.</p>
+        </article>
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-coral-soft grid place-items-center text-2xl" aria-hidden="true">🌤️</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Daily Routines &amp; Feelings</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">Smoother mealtimes, bedtimes, and transitions — plus gentle ways to handle big feelings.</p>
+        </article>
+        <article class="lift rounded-3xl bg-white p-7 shadow-sm border border-sand">
+          <div class="h-12 w-12 rounded-2xl bg-brand-bluesoft grid place-items-center text-2xl" aria-hidden="true">🥄</div>
+          <h3 class="mt-4 font-display text-xl font-bold">Everyday Living Skills</h3>
+          <p class="mt-2 text-inksoft leading-relaxed">Eating, dressing, and self-care — small daily victories that build independence and confidence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. HOW TO GET STARTED IN ILLINOIS
+  ============================================================ -->
+  <section id="get-started" class="bg-brand-bluesoft/60">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink">How to Get Started in Illinois</h2>
+        <p class="mt-4 text-lg text-inksoft leading-relaxed">
+          In Illinois, Early Intervention begins with your local <strong class="text-ink">Child and Family Connections (CFC)</strong> office. The process is free to start, and we're happy to help you along the way.
+        </p>
+      </div>
+
+      <ol class="mt-10 grid gap-6 md:grid-cols-2">
+        <li class="rounded-3xl bg-white p-7 shadow-sm flex gap-5">
+          <span class="h-11 w-11 shrink-0 rounded-full bg-brand-blue text-white font-display font-extrabold grid place-items-center text-lg" aria-hidden="true">1</span>
+          <div>
+            <h3 class="font-display text-lg font-bold">Call your local CFC office</h3>
+            <p class="mt-1.5 text-inksoft leading-relaxed">Anyone can make a referral — you don't need a doctor's note. Find your office at <a href="https://eitp.education.illinois.edu/cfc.html" class="font-semibold text-brand-blue underline underline-offset-2">the Illinois CFC directory</a> or call the statewide line at <a href="tel:18003234769" class="font-semibold text-brand-blue underline underline-offset-2">1-800-323-4769</a>.</p>
+          </div>
+        </li>
+        <li class="rounded-3xl bg-white p-7 shadow-sm flex gap-5">
+          <span class="h-11 w-11 shrink-0 rounded-full bg-brand-blue text-white font-display font-extrabold grid place-items-center text-lg" aria-hidden="true">2</span>
+          <div>
+            <h3 class="font-display text-lg font-bold">Free evaluation</h3>
+            <p class="mt-1.5 text-inksoft leading-relaxed">A team will play with your child and chat with you to understand how they're growing. It's relaxed, family-friendly, and at no cost to you.</p>
+          </div>
+        </li>
+        <li class="rounded-3xl bg-white p-7 shadow-sm flex gap-5">
+          <span class="h-11 w-11 shrink-0 rounded-full bg-brand-blue text-white font-display font-extrabold grid place-items-center text-lg" aria-hidden="true">3</span>
+          <div>
+            <h3 class="font-display text-lg font-bold">Build your family's plan (IFSP)</h3>
+            <p class="mt-1.5 text-inksoft leading-relaxed">If your child qualifies, you'll work with your CFC service coordinator to create an Individualized Family Service Plan — your goals, your routines, your child.</p>
+          </div>
+        </li>
+        <li class="rounded-3xl bg-white p-7 shadow-sm flex gap-5">
+          <span class="h-11 w-11 shrink-0 rounded-full bg-coral text-white font-display font-extrabold grid place-items-center text-lg" aria-hidden="true">4</span>
+          <div>
+            <h3 class="font-display text-lg font-bold">Ask for Little Talkers</h3>
+            <p class="mt-1.5 text-inksoft leading-relaxed">Families can request a provider by name. Tell your service coordinator you'd like <strong class="text-ink">Little Talkers</strong> — then we'll come to you and begin, gently, through play.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="mt-8 rounded-3xl bg-white/70 border border-white p-6 sm:p-7 text-inksoft leading-relaxed">
+        <p><strong class="text-ink">A gentle note about waiting:</strong> Early Intervention is in high demand across Illinois, and sometimes there's a wait before services begin. Starting the CFC process early helps — and we're glad to answer questions while you wait. <a href="#contact" class="font-semibold text-brand-blue underline underline-offset-2">Reach out anytime.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. OUR APPROACH
+  ============================================================ -->
+  <section id="approach">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20 grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink">Our Approach: Family First, Play Always</h2>
+        <p class="mt-4 text-lg text-inksoft leading-relaxed">
+          You are your child's first and best teacher. Our therapists come to your home across the Chicagoland area and work side by side with you — coaching, encouraging, and celebrating every small win.
+        </p>
+        <ul class="mt-6 space-y-4 text-inksoft">
+          <li class="flex gap-3"><span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-brand-bluesoft text-brand-blue grid place-items-center font-bold" aria-hidden="true">✓</span><p><strong class="text-ink">In your home,</strong> with your child's own toys, snacks, and routines — because that's where learning sticks.</p></li>
+          <li class="flex gap-3"><span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-brand-bluesoft text-brand-blue grid place-items-center font-bold" aria-hidden="true">✓</span><p><strong class="text-ink">Through play,</strong> because for little ones, play <em>is</em> the work of growing.</p></li>
+          <li class="flex gap-3"><span class="mt-1 h-6 w-6 shrink-0 rounded-full bg-brand-bluesoft text-brand-blue grid place-items-center font-bold" aria-hidden="true">✓</span><p><strong class="text-ink">With you, not just your child</strong> — you'll leave every visit with simple ideas to keep the progress going all week.</p></li>
+        </ul>
+      </div>
+      <div>
+        <!-- PHOTO PLACEHOLDER (900×700): therapist coaching a parent while child plays nearby, in-home candid moment -->
+        <img src="https://placehold.co/900x700/F4ECE2/6B625C?text=Photo%3A+therapist+coaching+parent+(900%C3%97700)"
+             alt="A therapist showing a parent a playful activity while their toddler explores toys on the rug"
+             class="w-full rounded-3xl shadow-md object-cover aspect-[9/7]" width="900" height="700" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. SPEECH THERAPY FOR AGES 3–5 (secondary)
+  ============================================================ -->
+  <section id="speech-3-5" class="bg-sand">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
+      <div class="rounded-3xl bg-white p-8 sm:p-10 shadow-sm grid gap-8 md:grid-cols-[1fr_280px] md:items-center">
+        <div>
+          <p class="inline-block rounded-full bg-coral-soft text-coral-dark text-sm font-bold px-4 py-1.5 mb-4">Beyond Early Intervention</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-ink">Speech Therapy for Ages 3–5</h2>
+          <p class="mt-3 text-inksoft leading-relaxed max-w-2xl">
+            When children turn 3, they graduate from Early Intervention — but sometimes a little more support helps. We offer speech-language therapy for preschoolers ages 3 to 5 through <strong class="text-ink">insurance and private pay</strong>, with the same warm, play-based style your family knows.
+          </p>
+          <a href="#contact" class="mt-5 inline-flex items-center rounded-full border-2 border-coral px-6 py-2.5 text-sm font-bold text-coral-dark hover:bg-coral-soft transition-colors">Ask about preschool speech therapy</a>
+        </div>
+        <!-- PHOTO PLACEHOLDER (560×560 square): preschooler practicing sounds with a therapist, playful close-up -->
+        <img src="https://placehold.co/560x560/FBF7F2/6B625C?text=Photo%3A+preschool+speech+session+(560%C3%97560)"
+             alt="A preschool-aged child laughing during a playful speech therapy game with picture cards"
+             class="w-full rounded-2xl object-cover aspect-square" width="560" height="560" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. JOIN OUR TEAM (present, not dominant)
+  ============================================================ -->
+  <section id="careers">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-16">
+      <div class="rounded-3xl bg-brand-bluesoft/70 p-8 sm:p-10 text-center max-w-3xl mx-auto">
+        <h2 class="font-display text-2xl font-extrabold text-ink">For Therapists: Join Our Team</h2>
+        <p class="mt-3 text-inksoft leading-relaxed">
+          Are you a certified Early Intervention therapist — SLP, DT, OT, or PT — who loves working with families? Little Talkers offers flexible scheduling, work in your own area, supportive collaboration, and reliable, on-time pay. We'd love to meet you.
+        </p>
+        <a href="#contact" class="mt-5 inline-flex items-center rounded-full bg-brand-blue px-6 py-3 text-sm font-bold text-white hover:bg-brand-bluedark transition-colors">Inquire about opportunities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. CONTACT
+  ============================================================ -->
+  <section id="contact" class="bg-coral-soft/60">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20 grid gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-ink">We're Here to Help</h2>
+        <p class="mt-4 text-lg text-inksoft leading-relaxed max-w-md">
+          Questions about your child's development, the Early Intervention process, or working with us? Reach out — a real person will get back to you.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          <!-- COPY PLACEHOLDER: replace with the real practice phone number -->
+          <a href="tel:+13125550123" class="flex items-center gap-4 group">
+            <span class="h-12 w-12 rounded-2xl bg-white shadow-sm grid place-items-center text-2xl" aria-hidden="true">📞</span>
+            <span>
+              <span class="block text-sm font-semibold text-inksoft">Call or text us</span>
+              <span class="block font-display text-2xl font-extrabold text-coral-dark group-hover:underline">(312) 555-0123</span>
+            </span>
+          </a>
+          <!-- COPY PLACEHOLDER: replace with the real practice email -->
+          <a href="mailto:hello@littletalkers.com" class="flex items-center gap-4 group">
+            <span class="h-12 w-12 rounded-2xl bg-white shadow-sm grid place-items-center text-2xl" aria-hidden="true">✉️</span>
+            <span>
+              <span class="block text-sm font-semibold text-inksoft">Email us</span>
+              <span class="block font-display text-lg font-extrabold text-brand-blue group-hover:underline">hello@littletalkers.com</span>
+            </span>
+          </a>
+          <p class="flex items-center gap-4">
+            <span class="h-12 w-12 rounded-2xl bg-white shadow-sm grid place-items-center text-2xl" aria-hidden="true">📍</span>
+            <span>
+              <span class="block text-sm font-semibold text-inksoft">Where we serve</span>
+              <span class="block font-display text-lg font-extrabold text-ink">The greater Chicagoland area — we come to you</span>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact form: wire `action` to your form handler (e.g., Formspree, Netlify Forms) -->
+      <form class="rounded-3xl bg-white p-7 sm:p-8 shadow-md space-y-5" action="#" method="post">
+        <h3 class="font-display text-xl font-bold">Send us a message</h3>
+        <div>
+          <label for="name" class="block text-sm font-bold mb-1.5">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name"
+                 class="w-full rounded-xl border border-sand bg-cream px-4 py-3 text-ink placeholder:text-inksoft/60" placeholder="First and last name" />
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-bold mb-1.5">Phone or email</label>
+          <input id="phone" name="contact" type="text" required autocomplete="tel"
+                 class="w-full rounded-xl border border-sand bg-cream px-4 py-3 text-ink placeholder:text-inksoft/60" placeholder="Best way to reach you" />
+        </div>
+        <div>
+          <label for="reason" class="block text-sm font-bold mb-1.5">I'm reaching out about</label>
+          <select id="reason" name="reason" class="w-full rounded-xl border border-sand bg-cream px-4 py-3 text-ink">
+            <option>My child (ages 0–3, Early Intervention)</option>
+            <option>My child (ages 3–5, speech therapy)</option>
+            <option>Joining the team (therapists)</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-bold mb-1.5">How can we help?</label>
+          <textarea id="message" name="message" rows="4"
+                    class="w-full rounded-xl border border-sand bg-cream px-4 py-3 text-ink placeholder:text-inksoft/60" placeholder="Tell us a little about your child or your question — no detail is too small."></textarea>
+        </div>
+        <button type="submit" class="w-full rounded-full bg-coral px-6 py-3.5 font-bold text-white hover:bg-coral-dark transition-colors">Send message</button>
+        <p class="text-xs text-inksoft">We'll only use your information to respond to you. Please don't include private medical details in this form.</p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       10. FOOTER
+  ============================================================ -->
+  <footer class="bg-ink text-cream">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-3">
+      <div>
+        <!-- LOGO PLACEHOLDER: footer uses the wide baby-faces banner at assets/little-talkers-faces.png (use as-is) -->
+        <img src="assets/little-talkers-faces.png" alt="Five smiling illustrated baby faces from the Little Talkers logo" class="h-12 w-auto bg-white rounded-xl px-3 py-1.5" width="300" height="60" loading="lazy" />
+        <p class="mt-4 font-display text-lg font-bold">Little Talkers, LLC</p>
+        <p class="text-sm text-cream/70">Early Intervention Services &bull; Chicagoland, Illinois</p>
+      </div>
+      <nav aria-label="Footer">
+        <h3 class="font-display font-bold mb-3">Explore</h3>
+        <ul class="space-y-2 text-cream/80 text-sm">
+          <li><a href="#early-intervention" class="hover:text-white hover:underline">What is Early Intervention</a></li>
+          <li><a href="#services" class="hover:text-white hover:underline">How We Help</a></li>
+          <li><a href="#get-started" class="hover:text-white hover:underline">Getting Started in Illinois</a></li>
+          <li><a href="#speech-3-5" class="hover:text-white hover:underline">Speech Therapy Ages 3–5</a></li>
+          <li><a href="#careers" class="hover:text-white hover:underline">Join Our Team</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="font-display font-bold mb-3">Contact</h3>
+        <ul class="space-y-2 text-cream/80 text-sm">
+          <!-- COPY PLACEHOLDERS: real phone + email -->
+          <li><a href="tel:+13125550123" class="hover:text-white hover:underline">(312) 555-0123</a></li>
+          <li><a href="mailto:hello@littletalkers.com" class="hover:text-white hover:underline">hello@littletalkers.com</a></li>
+          <li>Illinois EI referrals: <a href="tel:18003234769" class="hover:text-white hover:underline">1-800-323-4769</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <p class="mx-auto max-w-6xl px-4 sm:px-6 py-5 text-xs text-cream/60">&copy; 2026 Little Talkers, LLC. Little Talkers is a provider in the Illinois Early Intervention program, administered through local Child and Family Connections (CFC) offices.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
