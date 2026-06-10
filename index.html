@@ -15,14 +15,14 @@
           colors: {
             /* Sampled directly from the Little Talkers logo */
             coral: {
-              DEFAULT: '#F2544E', /* "Little Talkers" wordmark red/coral */
-              dark:   '#D93F39',
-              soft:   '#FDEAE8',
+              DEFAULT: '#FF5757', /* "Little Talkers" wordmark red/coral */
+              dark:   '#E03E3E',
+              soft:   '#FFEBEB',
             },
             brand: {
-              blue:      '#1A5DC8', /* "Early Intervention Services" blue */
-              bluedark:  '#15479A',
-              bluesoft:  '#E8F0FC',
+              blue:      '#1D61BB', /* "Early Intervention Services" blue */
+              bluedark:  '#164B91',
+              bluesoft:  '#E8F0FA',
             },
             cream:  '#FBF7F2', /* warm off-white background */
             sand:   '#F4ECE2', /* warm neutral section background */
@@ -55,7 +55,7 @@
     }
     /* Visible keyboard focus everywhere */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-      outline: 3px solid #1A5DC8; outline-offset: 2px; border-radius: .5rem;
+      outline: 3px solid #1D61BB; outline-offset: 2px; border-radius: .5rem;
     }
   </style>
 </head>
@@ -70,7 +70,6 @@
   <header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-sand">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between gap-4 py-3">
       <a href="#top" class="flex items-center gap-3 shrink-0" aria-label="Little Talkers Early Intervention Services — home">
-        <!-- LOGO PLACEHOLDER: drop the provided square logo file at assets/little-talkers-logo.png (use as-is, do not recolor) -->
         <img src="assets/little-talkers-logo.png" alt="Little Talkers Early Intervention Services logo — five smiling illustrated baby faces" class="h-12 w-auto sm:h-14" width="120" height="120" />
       </a>
 
@@ -119,9 +118,8 @@
       </div>
 
       <div class="relative">
-        <!-- HERO PHOTO PLACEHOLDER (1000×750, 4:3): warm candid photo of a therapist or parent playing on the floor with a toddler, soft natural light -->
-        <img src="https://placehold.co/1000x750/F4ECE2/6B625C?text=Hero+photo%3A+therapist+%26+toddler+playing+(1000%C3%97750)"
-             alt="A therapist sitting on a living-room floor, smiling and playing with a toddler stacking blocks"
+        <img src="assets/hero-therapist-toddlers.avif"
+             alt="A therapist coloring and playing at a table with two toddlers, one exploring a wooden shape sorter"
              class="w-full rounded-3xl shadow-lg object-cover aspect-[4/3]" width="1000" height="750" loading="eager" />
         <div class="absolute -bottom-4 -left-4 hidden sm:block h-24 w-24 rounded-full bg-coral-soft" aria-hidden="true"></div>
       </div>
@@ -134,9 +132,8 @@
   <section id="early-intervention" class="bg-sand">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-20 grid gap-10 lg:grid-cols-2 lg:items-center">
       <div class="order-2 lg:order-1">
-        <!-- PHOTO PLACEHOLDER (800×600): parent holding young child, reassuring everyday moment at home -->
-        <img src="https://placehold.co/800x600/FBF7F2/6B625C?text=Photo%3A+parent+%26+child+at+home+(800%C3%97600)"
-             alt="A parent holding their young child close in a sunlit kitchen, both smiling"
+        <img src="assets/toddler-train-play.avif"
+             alt="A toddler in red socks crouching on the floor, playing with a wooden train set"
              class="w-full rounded-3xl shadow-md object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
       </div>
       <div class="order-1 lg:order-2">
@@ -276,9 +273,8 @@
         </ul>
       </div>
       <div>
-        <!-- PHOTO PLACEHOLDER (900×700): therapist coaching a parent while child plays nearby, in-home candid moment -->
-        <img src="https://placehold.co/900x700/F4ECE2/6B625C?text=Photo%3A+therapist+coaching+parent+(900%C3%97700)"
-             alt="A therapist showing a parent a playful activity while their toddler explores toys on the rug"
+        <img src="assets/children-laughing.avif"
+             alt="Two young children sitting in a doorway, laughing together"
              class="w-full rounded-3xl shadow-md object-cover aspect-[9/7]" width="900" height="700" loading="lazy" />
       </div>
     </div>
@@ -298,10 +294,9 @@
           </p>
           <a href="#contact" class="mt-5 inline-flex items-center rounded-full border-2 border-coral px-6 py-2.5 text-sm font-bold text-coral-dark hover:bg-coral-soft transition-colors">Ask about preschool speech therapy</a>
         </div>
-        <!-- PHOTO PLACEHOLDER (560×560 square): preschooler practicing sounds with a therapist, playful close-up -->
-        <img src="https://placehold.co/560x560/FBF7F2/6B625C?text=Photo%3A+preschool+speech+session+(560%C3%97560)"
-             alt="A preschool-aged child laughing during a playful speech therapy game with picture cards"
-             class="w-full rounded-2xl object-cover aspect-square" width="560" height="560" loading="lazy" />
+        <img src="assets/what-is-speech-pathology.jpg"
+             alt="A speech-language pathologist working one-on-one with a preschool-aged child"
+             class="w-full rounded-2xl object-cover aspect-[4/3]" width="1000" height="627" loading="lazy" />
       </div>
     </div>
   </section>
@@ -402,7 +397,6 @@
   <footer class="bg-ink text-cream">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-3">
       <div>
-        <!-- LOGO PLACEHOLDER: footer uses the wide baby-faces banner at assets/little-talkers-faces.png (use as-is) -->
         <img src="assets/little-talkers-faces.png" alt="Five smiling illustrated baby faces from the Little Talkers logo" class="h-12 w-auto bg-white rounded-xl px-3 py-1.5" width="300" height="60" loading="lazy" />
         <p class="mt-4 font-display text-lg font-bold">Little Talkers, LLC</p>
         <p class="text-sm text-cream/70">Early Intervention Services &bull; Chicagoland, Illinois</p>
