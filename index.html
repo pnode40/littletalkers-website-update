@@ -334,11 +334,11 @@
 
         <div class="mt-8 space-y-5">
           <!-- COPY PLACEHOLDER: replace with the real practice phone number -->
-          <a href="tel:+13125550123" class="flex items-center gap-4 group">
+          <a href="tel:+17087380852" class="flex items-center gap-4 group">
             <span class="h-12 w-12 rounded-2xl bg-white shadow-sm grid place-items-center text-2xl" aria-hidden="true">📞</span>
             <span>
               <span class="block text-sm font-semibold text-inksoft">Call or text us</span>
-              <span class="block font-display text-2xl font-extrabold text-coral-dark group-hover:underline">(312) 555-0123</span>
+              <span class="block font-display text-2xl font-extrabold text-coral-dark group-hover:underline">(708) 738-0852</span>
             </span>
           </a>
           <!-- COPY PLACEHOLDER: replace with the real practice email -->
@@ -359,8 +359,9 @@
         </div>
       </div>
 
-      <!-- Contact form: wire `action` to your form handler (e.g., Formspree, Netlify Forms) -->
-      <form class="rounded-3xl bg-white p-7 sm:p-8 shadow-md space-y-5" action="#" method="post">
+      <!-- Contact form: submits to the Google Apps Script endpoint via fetch (see script at bottom of page) -->
+      <form id="contact-form" class="rounded-3xl bg-white p-7 sm:p-8 shadow-md space-y-5"
+            action="https://script.google.com/macros/s/AKfycbyKS8SEVowdhkQD3q8uIG_kz7EAs9a66hBLtPUTagtT2d_kFrx2oLSK7KgD6anqRH6Ojw/exec" method="post">
         <h3 class="font-display text-xl font-bold">Send us a message</h3>
         <div>
           <label for="name" class="block text-sm font-bold mb-1.5">Your name</label>
@@ -386,7 +387,8 @@
           <textarea id="message" name="message" rows="4"
                     class="w-full rounded-xl border border-sand bg-cream px-4 py-3 text-ink placeholder:text-inksoft/60" placeholder="Tell us a little about your child or your question — no detail is too small."></textarea>
         </div>
-        <button type="submit" class="w-full rounded-full bg-coral px-6 py-3.5 font-bold text-white hover:bg-coral-dark transition-colors">Send message</button>
+        <button type="submit" class="w-full rounded-full bg-coral px-6 py-3.5 font-bold text-white hover:bg-coral-dark transition-colors disabled:opacity-60 disabled:cursor-wait">Send message</button>
+        <p id="form-status" class="hidden rounded-xl bg-brand-bluesoft text-brand-bluedark font-semibold px-4 py-3 text-sm" role="status" aria-live="polite"></p>
         <p class="text-xs text-inksoft">We'll only use your information to respond to you. Please don't include private medical details in this form.</p>
       </form>
     </div>
@@ -419,7 +421,7 @@
         <h3 class="font-display font-bold mb-3">Contact</h3>
         <ul class="space-y-2 text-cream/80 text-sm">
           <!-- COPY PLACEHOLDERS: real phone + email -->
-          <li><a href="tel:+13125550123" class="hover:text-white hover:underline">(312) 555-0123</a></li>
+          <li><a href="tel:+17087380852" class="hover:text-white hover:underline">(708) 738-0852</a></li>
           <li><a href="mailto:hello@littletalkers.com" class="hover:text-white hover:underline">hello@littletalkers.com</a></li>
           <li>Illinois EI referrals: <a href="tel:18003234769" class="hover:text-white hover:underline">1-800-323-4769</a></li>
         </ul>
@@ -429,6 +431,30 @@
       <p class="mx-auto max-w-6xl px-4 sm:px-6 py-5 text-xs text-cream/60">&copy; 2026 Little Talkers, LLC. Little Talkers is a provider in the Illinois Early Intervention program, administered through local Child and Family Connections (CFC) offices.</p>
     </div>
   </footer>
+
+  <!-- Contact form submission to Google Apps Script (no-cors keeps the visitor on the page) -->
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var status = document.getElementById('form-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.classList.remove('hidden');
+        status.textContent = 'Sending…';
+        fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+          .then(function () {
+            status.textContent = "Thank you! Your message has been sent — we'll be in touch soon.";
+            form.reset();
+          })
+          .catch(function () {
+            status.textContent = 'Something went wrong. Please call or text us at (708) 738-0852.';
+          })
+          .finally(function () { button.disabled = false; });
+      });
+    })();
+  </script>
 
 </body>
 </html>
